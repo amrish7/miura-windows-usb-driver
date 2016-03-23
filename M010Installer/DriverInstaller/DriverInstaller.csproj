@@ -46,15 +46,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="M010\amd64\dpinst.exe">
+    <Content Include="M010\amd64\dpinst.amd64.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="M010\amd64\usbser.inf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="M010\x86\dpinst.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="M010\x86\dpinst.x86.exe" />
   </ItemGroup>
   <ItemGroup>
     <None Include="M010\amd64\m010.cat">

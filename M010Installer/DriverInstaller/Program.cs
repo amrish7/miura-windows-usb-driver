@@ -11,8 +11,8 @@ namespace DriverInstaller
             try
             {
                 Console.WriteLine("Installing Miura M010 driver on {0} OS", Environment.Is64BitOperatingSystem ? "x64" : "x86");
-                var pathToDPinst = string.Format(@"{0}M010\{1}\dpinst.exe", AppDomain.CurrentDomain.BaseDirectory,
-                    Environment.Is64BitOperatingSystem ? "amd64" : "x86");
+                var pathToDPinst = string.Format(@"{0}M010\{1}\dpinst.{2}.exe", AppDomain.CurrentDomain.BaseDirectory,
+                    Environment.Is64BitOperatingSystem ? "amd64" : "x86", Environment.Is64BitOperatingSystem ? "amd64" : "x86");
                 Console.WriteLine("DPInst path : " + pathToDPinst);
                 var startInfo = new System.Diagnostics.ProcessStartInfo
                 {
