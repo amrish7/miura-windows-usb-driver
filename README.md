@@ -2,7 +2,7 @@
 This repository contains USB driver for Miura EMV Reader (M010) and windows installer project that installs the driver files (INF & CAT) and the [Microsoft Driver Package Installer redistributable] (https://msdn.microsoft.com/en-us/library/windows/hardware/ff544842%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) for x86 and x64 versions of Windows.
 
 # Preparing the Catalog file
-The catalog files from this repository were created using the `inf2cat` utility
+The catalog files on this repository were created using the `inf2cat` utility
 ```
 inf2cat /driver:{PATH_TO_INF_FILE} /os:7_x64
 ```
