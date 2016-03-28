@@ -9,7 +9,8 @@ The catalog files on this repository were created using the `inf2cat` utility. F
     * `inf2cat` would be located in `C:\WinDDK\7600.16385.1\bin\selfsign\Inf2Cat.exe`
 
 # Signing the driver package
-Work In Progress...
+* Copy the code signing certificate to the folder that has the `inf` and generated `cat` file
+* Execute the command `SignTool sign /f {fileName} /p {password} m010.cat` from command prompt with admin privileges
 
 # Installing the driver package
 The `DriverInstaller` project is a windows console app that executes the `DPInst.exe` utility. The windows installer project takes care of copying the required installation files to the `\Program Files(x86)\` folder and automates the `DPInst.exe` command
