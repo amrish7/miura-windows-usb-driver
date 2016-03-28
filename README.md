@@ -5,7 +5,7 @@ This repository contains USB driver for Miura EMV Reader (M010) and windows inst
 The catalog files on this repository were created using the `inf2cat` utility. Following are the steps to re-create CAT file
   * Install [Windows 7 WDK] (https://www.microsoft.com/en-us/download/details.aspx?id=11800)
   * Open the `build` prompt forfrom Win7 WDK (Search for `x64 checked build environment`) with admin privileges
-  * Execute `inf2cat /driver:{PATH_TO_INF_FILE} /os:7_x64, 7_X86, XP_X64, XP_X86` by adding all relevant target OS. (See [this link] (https://msdn.microsoft.com/en-us/library/windows/hardware/ff547089(v=vs.85).aspx) for full list of versions)
+  * Execute `inf2cat /driver:{PATH_TO_FOLDER_CONTAINING_INF_FILE} /os:7_x64, 7_X86, XP_X64, XP_X86` by adding all relevant target OS. (See [this link] (https://msdn.microsoft.com/en-us/library/windows/hardware/ff547089(v=vs.85).aspx) for full list of versions)
     * `inf2cat` would be located in `C:\WinDDK\7600.16385.1\bin\selfsign\Inf2Cat.exe`
 
 # Signing the driver package
