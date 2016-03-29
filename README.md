@@ -10,11 +10,11 @@ The catalog files on this repository were created using the `inf2cat` utility. F
 
 # Signing the driver package
 The following two files should be digitally signed
-## Driver file
+### Driver file
 * Copy the code signing certificate to the folder that has the `inf` and generated `cat` file
 * Execute the command `SignTool sign /f {CERTIFICATE_FILE_NAME} /p {password} /t http://timestamp.verisign.com/scripts/timstamp.dll m010.cat` from command prompt with admin privileges
  
-## Windows installer file
+### Windows installer file
 * Copy the code signing certificate to the `bin/debug` or `bin/release` folder of the WindowsSetup project.
 * Execute the command `SignTool sign /f {CERTIFICATE_FILE_NAME} /p {password} /t http://timestamp.verisign.com/scripts/timstamp.dll MiuraEmvDriverInstaller.msi` from command prompt with admin privileges
 
