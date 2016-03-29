@@ -9,8 +9,14 @@ The catalog files on this repository were created using the `inf2cat` utility. F
     * `inf2cat` would be located in `C:\WinDDK\7600.16385.1\bin\selfsign\Inf2Cat.exe`
 
 # Signing the driver package
+The following two files should be digitally signed
+### Driver file
 * Copy the code signing certificate to the folder that has the `inf` and generated `cat` file
-* Execute the command `SignTool sign /f {fileName} /p {password} /t http://timestamp.verisign.com/scripts/timstamp.dll m010.cat` from command prompt with admin privileges
+* Execute the command `SignTool sign /f {CERTIFICATE_FILE_NAME} /p {password} /t http://timestamp.verisign.com/scripts/timstamp.dll m010.cat` from command prompt with admin privileges
+ 
+### Windows installer file
+* Copy the code signing certificate to the `bin/debug` or `bin/release` folder of the WindowsSetup project.
+* Execute the command `SignTool sign /f {CERTIFICATE_FILE_NAME} /p {password} /t http://timestamp.verisign.com/scripts/timstamp.dll MiuraEmvDriverInstaller.msi` from command prompt with admin privileges
 
 # Installing the driver package
 The `DriverInstaller` project is a windows console app that executes the `DPInst.exe` utility. The windows installer project takes care of copying the required installation files to the `\Program Files(x86)\` folder and automates the `DPInst.exe` command
